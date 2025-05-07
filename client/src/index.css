@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Cores da nova paleta:
+     Azul escuro: #2C2C83 (HSL: 240 49% 34%)
+     Rosa: #E6007D (HSL: 328 100% 45%)
+     Branco: #FFFFFF (HSL: 0 0% 100%)
+  */
+  --background: 240 49% 97%; /* Azul bem claro, quase branco */
+  --foreground: 240 49% 34%; /* Azul escuro */
+  --muted: 240 30% 96%;
+  --muted-foreground: 240 49% 25%;
+  --popover: 0 0% 100%; /* Branco */
+  --popover-foreground: 240 49% 34%; /* Azul escuro */
+  --card: 240 49% 99%; /* Azul muito claro para cartões */
+  --card-foreground: 240 49% 34%; /* Azul escuro */
+  --border: 240 33% 90%;
+  --input: 240 33% 90%;
+  --primary: 240 49% 34%; /* Azul escuro #2C2C83 */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  --secondary: 328 100% 45%; /* Rosa #E6007D */
+  --secondary-foreground: 0 0% 100%; /* Branco */
+  --accent: 328 100% 45%; /* Rosa #E6007D */
+  --accent-foreground: 0 0% 100%; /* Branco */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%; /* Branco */
+  --ring: 240 49% 34%; /* Azul escuro */
+  --radius: 0.5rem;
+}
+  .dark {
+  /* Cores da nova paleta em modo escuro:
+     Azul escuro: #2C2C83 (HSL: 240 49% 34%)
+     Rosa: #E6007D (HSL: 328 100% 45%)
+     Fundo escuro baseado no azul
+  */
+  --background: 240 49% 15%; /* Versão escura do azul */
+  --foreground: 0 0% 100%; /* Branco */
+  --muted: 240 49% 25%;
+  --muted-foreground: 240 30% 80%;
+  --popover: 240 49% 15%; /* Versão escura do azul */
+  --popover-foreground: 0 0% 100%; /* Branco */
+  --card: 240 49% 15%; /* Versão escura do azul */
+  --card-foreground: 0 0% 100%; /* Branco */
+  --border: 240 49% 25%;
+  --input: 240 49% 25%;
+  --primary: 240 49% 34%; /* Azul escuro #2C2C83 */
+  --primary-foreground: 0 0% 100%; /* Branco */
+  --secondary: 328 100% 45%; /* Rosa #E6007D */
+  --secondary-foreground: 0 0% 100%; /* Branco */
+  --accent: 328 100% 45%; /* Rosa #E6007D */
+  --accent-foreground: 0 0% 100%; /* Branco */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%; /* Branco */
+  --ring: 240 49% 50%; /* Azul mais claro */
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
