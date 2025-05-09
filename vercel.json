@@ -1,11 +1,7 @@
 {
-  "builds": [
-    {
-      "src": "vite.config.ts",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
