@@ -69,3 +69,5 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
   const PORT = process.env.PORT || 3000;	
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  });
+})();
