@@ -8,9 +8,13 @@ if (!process.env.DATABASE_URL) {
   );
 }
  
-export const pool = new Pool({
+const { Pool } = require('pg');
+
+const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }, // necessário para Render
+  ssl: {
+    rejectUnauthorized: false, // necessário para conexões SSL em serviços externos
+  },
 });
  
 export const db = drizzle(pool, { schema });
